@@ -1,0 +1,41 @@
+version: "3.9"
+services:
+  my_kibana:
+    image: kibana:6.4.2
+    ports:
+     - "8091:9200"
+    deploy:
+      replicas: 1
+    networks:
+      main:
+        aliases:
+         - my_kibana
+
+
+  my_nginx:
+    image: nginx:alpine
+    ports: 
+     - "8092:80"
+    deploy:
+      replicas: 1 
+    networks:
+      main:
+        aliases:
+         - my_nginx
+
+
+  my_mysql:
+    image: mysql/mysql-server:8.0
+    environment:
+     - MYSQL_ALLOW_EMPTY_PASSWORD=true
+    ports: 
+     - "8093:33060"
+    deploy:
+      replicas: 1
+    networks:
+      main:
+        aliases:
+         - my_mysql
+
+networks:
+  main:
