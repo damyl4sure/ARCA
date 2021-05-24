@@ -12,3 +12,4 @@ https://docs.docker.com/compose/install/
 
 3. After cloning/downloading the repo, RUN 'bash automate.sh'
 
+[A. sudo docker  exec -it (containerID) /bin/sh          B. ping servicename]
