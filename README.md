@@ -10,5 +10,5 @@ https://docs.docker.com/engine/install/
 https://docs.docker.com/compose/install/ 
 
 
-3. After cloning/downloading the repo, RUN the bash scirpt with the command "bash automate.sh"
+3. After cloning/downloading the repo, RUN 'bash automate.sh'
 
