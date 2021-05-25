@@ -1,3 +1,7 @@
+# This .yaml cloudformation file will deploy an EC2 instance in the AWS VPC.
+# Prefferably, the default VPC location should be specified while performing AWS config.
+# Apache server will be installed on the deployed server and the server will be in a shutdown state. 
+ 
 Resources:
   arcaEC2:
     Type: AWS::EC2::Instance
@@ -17,6 +21,11 @@ Resources:
             sudo chown -R $USER:$USER /var/www/
             sudo chmod -R 755 /var/www/html
             echo “Hello World ARCA” > /var/www/html/index.html
+      Tags: 
+        - Key: "ARCA_start"
+          Value: "start"
+        - Key: "ARCA_stop"
+          Value: "stop"      
   arcaEC2SG:
     Type: AWS::EC2::SecurityGroup
     Properties:
