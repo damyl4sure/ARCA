@@ -42,7 +42,7 @@ B. CloudFormation template to provision EC2 instance in the AWS default VPC.
 
 C. To start and stop EC2 instances with python script.
 
-1. Install python3 and boto3 module depending on your PC depending on the OS.
+1. Install python3 and boto3 module on your PC depending on the OS.
 
 
 2. To start the provisioned EC2 instance, Navigate to the DIR 'python_automate_aws_EC2' and RUN 'python3 start_ec2.py'
