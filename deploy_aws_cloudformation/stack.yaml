@@ -1,0 +1,32 @@
+Resources:
+  arcaEC2:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-00399ec92321828f5 # ubuntu 20:04 us-east-2 region
+      KeyName: arca-key
+      SecurityGroups:
+        - !Ref arcaEC2SG
+      UserData:
+        Fn::Base64: !Sub |
+            #!/bin/bash
+            sudo apt update -y
+            sudo apt install apache2 -y
+            sudo systemctl start apache2
+            sudo systemctl enable apache2
+            sudo chown -R $USER:$USER /var/www/
+            sudo chmod -R 755 /var/www/html
+            echo “Hello World ARCA” > /var/www/html/index.html
+  arcaEC2SG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: "for arca EC2 to allow ssh, http access" # Required
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '80'
+        ToPort: '80'
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: '22' 
+        ToPort: '22'
+        CidrIp: 0.0.0.0/0
