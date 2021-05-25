@@ -28,9 +28,9 @@ A. Requirements to automate the 3 docker containers deployment with the bash scr
 B. CloudFormation template to provision EC2 instance in the AWS default VPC.
 
 1. Install awccli depenind on your PC OS.
+    https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html 
 
-
-2. Configure AWS right profile with the neccessary permisions and select the default VPC location
+2. Configure AWS right profile with the neccessary permisions and select the default VPC location.
 
 3. Navigate to the DIR 'deploy_aws_cloudformation'
 
