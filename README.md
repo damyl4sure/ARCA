@@ -36,6 +36,6 @@ B. CloudFormation template to provision EC2 instance in the AWS default VPC.
 
 
 4. RUN 'aws cloudformation create-stack --stack-name arca-stage --template-body file://$PWD/stack.yaml --profile arca --region us-east-2' 
-    # specify the stack-name of your VPC location while running the command. 
-    # RUN a similar command delete stack  'aws cloudformation delete-stack --stack-name arca-stage --profile arca --region us-east-2'
+    # Specify the stack-name and your default VPC location while running the command. 
+    # RUN a similar command to delete the stack  'aws cloudformation delete-stack --stack-name arca-stage --profile arca --region us-east-2'
 
