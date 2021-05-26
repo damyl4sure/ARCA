@@ -1,4 +1,4 @@
-# Run this .py file to start the provisoned EC2 instance if the instance is in a stopped state.
+# Run this .py file to start the provisoned EC2 instance the instance is in a stopped state.
 
 from logging import Filter
 import boto3
