@@ -1,4 +1,4 @@
-# Run this .py file to start the provisoned EC2 instance.
+# Run this .py file to start the provisoned EC2 instance if in stopped state.
 
 from logging import Filter
 import boto3
@@ -12,4 +12,4 @@ for each_ins in client.describe_instances(Filters=[tag_start_ec2])['Reservations
     for inst_id in each_ins['Instances']:
         #print (inst_id['InstanceId'])
         client.start_instances(InstanceIds=[inst_id['InstanceId']])
-        print ("Starting instance's' now")
+        print ("Starting instance now")

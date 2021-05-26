@@ -12,4 +12,4 @@ for each_ins in client.describe_instances(Filters=[tag_stop_ec2])['Reservations'
     for inst_id in each_ins['Instances']:
         #print (inst_id['InstanceId'])
         client.stop_instances(InstanceIds=[inst_id['InstanceId']])
-        print ("Stoping instance's' now")
+        print ("Stoping instance now")

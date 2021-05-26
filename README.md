@@ -20,8 +20,10 @@ A. Requirements to automate the 3 docker containers deployment with the bash scr
 
 5. To test containers connectivity:
     a. sudo docker  exec -it (containerID) /bin/sh          
-    b. ping servicename
+    b. ping servicename (e.g my_kibana/ my_mysql/ my_nginx)
 
+
+ACCESS the nginx container on http://localhost:8092/
 
 
 
@@ -45,9 +47,7 @@ C. To start and stop EC2 instances with python script.
 1. Install python3 and boto3 module on your PC depending on the OS.
 
 
-2. To start the provisioned EC2 instance, Navigate to the DIR 'python_automate_aws_EC2' and RUN 'python3 start_ec2.py'
+2. To start the provisioned EC2 instance if the instance is in a stopped state, Navigate to the DIR 'python_automate_aws_EC2' and RUN 'python3 start_ec2.py'
 
 
-3. To stop the provisioned EC2 instance, Navigate to the DIR 'python_automate_aws_EC2' and RUN 'python3 stop_ec2.py'
-
-
+3. To stop the provisioned running EC2 instance, Navigate to the DIR 'python_automate_aws_EC2' and RUN 'python3 stop_ec2.py'

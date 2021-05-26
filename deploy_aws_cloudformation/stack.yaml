@@ -20,7 +20,7 @@ Resources:
             sudo systemctl enable apache2
             sudo chown -R $USER:$USER /var/www/
             sudo chmod -R 755 /var/www/html
-            echo “Hello World ARCA” > /var/www/html/index.html
+            echo 'Hello World ARCA Assessment' > /var/www/html/index.html
       Tags: 
         - Key: "ARCA_start"
           Value: "start"
